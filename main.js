@@ -10,14 +10,14 @@ app.use(expesss.urlencoded({extended:true}))
 
 app.get('/delete',async (req,res)=>{
     const id = req.query.id
-    let client = await mongoClient.connect(url)
+    let client = await mongoClient.connect(DATABASE_URL)
     let db = client.db("GCH1002")
     await db.collection("products").deleteOne({_id:ObjectId(id)})
     res.redirect('/all')
 })
 
 app.get('/all',async (req,res)=>{
-    let client = await mongoClient.connect(url)
+    let client = await mongoClient.connect(DATABASE_URL)
     let db = client.db("GCH1002")
     let results = await db.collection("products").find().toArray()
     console.log(results)
@@ -33,7 +33,7 @@ app.post('/new',async (req,res)=>{
         price: Number.parseFloat(price),
         picture: picUrl
     }
-    let client = await mongoClient.connect(url)
+    let client = await mongoClient.connect(DATABASE_URL)
     let db = client.db("GCH1002")
     let id = await db.collection("products").insertOne(newProduct)
     console.log(id)

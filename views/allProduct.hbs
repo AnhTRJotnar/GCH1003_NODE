@@ -12,7 +12,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 <body>
-    <h1>All Products</h1>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo2.png" width="100px" height="100px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="/all">Home</a></li>
+                        <li><a href="/new">Products</a></li>    
+                        <li><a href="#footer">About</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="login.php">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.php">
+                    <img class="cart" src="images/cart.png" width="30px" height="30px" href="cart.php">
+                </a>
+                <img class="menu-icon" src="images/menu.png" width="30px" height="30px" onclick="menutoggle()">
+            </div>
+        </div>
+    </div>
+    <div class="small-container">
+
+        <div class="row row-2">
+        <h2 class="title">All Products</h2>
+    <div class="search_box">
+      <form>
+        <input type="text" style="width:200px" value="Search" name="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+        <input type="button" style="width:70px" value="Search" onclick="document.forms[0].submit();">
+      </form>
+    </div>
     <ul>
         {{#each results}}
             <li>{{name}}
@@ -23,5 +54,50 @@
             </li>
         {{/each}}
     </ul>
+<!-- footer-->
+    <div class="footer" id="footer">
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Hot Lines</h3>
+                    <ul>
+                        <li>Technical Support: 9999 9999</li>
+                        <li>Call To Order: 1234 5678 </li>
+                        <li>Delivery Support: 1000 1000</li>
+                        <li>Feedback: 4949 2202</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Opening Hours</li>
+                        <li>Delivery Policy</li>
+                        <li>Return Policy</li>
+                        <li>Payment Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">This Is A School Project - Greenwich VN - GCH1003 - by Tran Anh</p>
+        </div>
+    </div>
 </body>
 </html>
