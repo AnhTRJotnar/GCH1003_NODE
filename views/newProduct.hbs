@@ -5,23 +5,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=q">
     <title>New Product</title>
-     <link rel="stylesheet" href="Style.css">
+     <link rel="stylesheet" href="/Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Poppins:wght@300;400;500;600;700&family=Shizuru&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 <body>
-    <h1>New Product</h1>
+     <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo2.png" width="100px" height="100px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/all">Products</a></li>    
+                        <li><a href="#footer">About</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="/new">Add New Product</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+    <div class="add-page">
+    <div class="addform-container">
+        <div class="form-btn">
+            <h2 style="padding-top: 35px">Add Items</h2>
+        </div>
     <form action="/new" method="post">
-        Name <input type="text" name="txtName">
-        <br>
-        Price <input type="text" name="txtPrice">
-        <br>
-        Picture URL
-        <input type="text" name="txtPic">
-        <br>
-        <input type="submit" value="Create a new Product" style="background-color:orange ;">
-    </form>
+        <table>
+            <tr>
+                <td width="20%">Name:</td>
+                <td width="80%"><input type="text" style="width:80%" name="txtName"></td>
+            </tr>
+            <tr>
+                <td width="20%">Images:</td>
+                <td width="80%"><input type="text" style="width:80%" name="txtPic"></td>
+            </tr>
+            <tr>
+                <td width="20%">Price:</td>
+                <td width="80%"><input type="text" style="width:80%"  name="txtPrice"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding: 100px"><input style="width:70px" type="submit" name="addproduct" class="btn" value="Add"></td>
+            </tr>
+        </table>
+    </form>    
+        </div>
+    </div>
+</div>
+ <!---footer--->
+    
+    <div class="footer" id="footer">
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Hot Lines</h3>
+                    <ul>
+                        <li>Technical Support: 9999 9999</li>
+                        <li>Call To Order: 1234 5678 </li>
+                        <li>Delivery Support: 1000 1000</li>
+                        <li>Feedback: 4949 2202</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Opening Hours</li>
+                        <li>Delivery Policy</li>
+                        <li>Return Policy</li>
+                        <li>Payment Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">This Is A School Project - Greenwich VN - GCH1003 - by Tran Anh</p>
+        </div>
+    </div>
 </body>
 </html>

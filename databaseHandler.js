@@ -7,8 +7,8 @@ async function insertNewProduct(newProduct) {
     return id
 }
 async function getDB() {
-    let client = await mongoClient.connect(DATABASE_URL)
-    let db = client.db("GCH1002")
+    let client = await MongoClient.connect(DATABASE_URL)
+    let db = client.db("GCH1003")
     return db
 }
 
@@ -19,6 +19,7 @@ async function getAllProducts() {
 }
 async function updateProduct(id, name, price, picUrl) {
     let db = await getDB()
+    console.log(id)
     await db.collection("products").updateOne({ _id: ObjectId(id) },
         { $set: { "name": name, "price": price, "picture": picUrl } })
 }
