@@ -12,17 +12,54 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 <body>
-    <h1 style="color: green;">Edit product</h1>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="/images/logo2.png" width="100px" height="100px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/all">Products</a></li>    
+                        <li><a href="/new">Add New Product</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="add-page">
+    <div class="addform-container">
+        <div class="form-btn">
+            <h2 style="padding-top: 35px">Edit Items</h2>
+        </div>
     <form action="/edit" method="post">
-        <input type="hidden" name="id" value="{{product._id}}">
-        Name <input type="text" name="txtName" value="{{product.name}}">
-        <br>
-        Price <input type="text" name="txtPrice" value="{{product.price}}">
-        <br>
-        Picture URL
-        <input type="text" name="txtPic" value="{{product.picture}}" size="50">
-        <br>
-        <input type="submit" value="Update Product" style="background-color:orange ;">
-    </form>
+        <table>
+            <tr>
+                <input type="hidden" name="id" value="{{product._id}}">
+                <td  inputtype="text" width="20%"name="txtName"> Name: </td>
+                <td width="80%"><input type="text" style="width:80%" name="txtName" value="{{product.name}}"></td>
+                <p class="Notice"> {{nameError}}</p>
+            </tr>
+            <tr>
+                <td inputtype="text" name="txtPic" width="20%" >Images:</td>
+                <td width="80%"><input type="text" style="width:80%" name="txtPic" value="{{product.picture}}"></td>
+                <p class="Notice"> {{picError}}</p>
+            </tr>
+            <tr>
+                <td inputtype="text" name="txtPrice"width="20%">Price:</td>
+                <td width="80%"><input type="text" style="width:80%"  name="txtPrice" value="{{product.price}}"></td>
+                <p class="Notice"> {{priceError}}</p>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding: 100px"><input style="width:70px" type="submit" name="Editproduct" class="btn" value="Update Product"></td>
+            </tr>
+        </table>
+    </form>    
+        </div>
+    </div>
+</div>
 </body>
 </html>

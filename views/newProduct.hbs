@@ -16,7 +16,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="images/logo2.png" width="100px" height="100px">
+                    <img src="/images/logo2.png" width="100px" height="100px">
                 </div>
                 <nav>
                     <ul id="MenuItems">
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="add-page">
     <div class="addform-container">
         <div class="form-btn">
@@ -40,15 +40,18 @@
         <table>
             <tr>
                 <td width="20%">Name:</td>
-                <td width="80%"><input type="text" style="width:80%" name="txtName"></td>
+                <td width="80%"><input type="text" style="width:80%" name="txtName" ></td>
+                <p class="Notice"> {{nameError}}</p>
             </tr>
             <tr>
                 <td width="20%">Images:</td>
                 <td width="80%"><input type="text" style="width:80%" name="txtPic"></td>
+                <p class="Notice"> {{picError}}</p>
             </tr>
             <tr>
                 <td width="20%">Price:</td>
                 <td width="80%"><input type="text" style="width:80%"  name="txtPrice"></td>
+                <p class="Notice"> {{priceError}}</p>
             </tr>
             <tr>
                 <td></td>
@@ -69,8 +72,8 @@
                     <h3>Download Our App</h3>
                     <p>Download App for Android and ios mobile phone.</p>
                     <div class="app-logo">
-                        <img src="images/play-store.png">
-                        <img src="images/app-store.png">
+                        <img src="/images/play-store.png">
+                        <img src="/images/app-store.png">
                     </div>
                 </div>
                 <div class="footer-col-2">

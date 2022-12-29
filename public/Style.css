@@ -102,7 +102,7 @@ p{
     flex-basis: 25%;
     padding: 10px;
     min-width: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     color: #1BA098;
     transition: transform 0.5s;
 }
@@ -110,7 +110,7 @@ p{
     color:#DEB992;
 }
 .col-4 img{
-    width: 100%;
+    width: 50%;
     border-radius: 3%;
 }
 .title{

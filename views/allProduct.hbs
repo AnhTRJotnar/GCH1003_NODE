@@ -16,14 +16,12 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="images/logo2.png" width="100px" height="100px">
+                    <img src="/images/logo2.png" width="100px" height="100px">
                 </div>
                 <nav>
                     <ul id="MenuItems">
                         <li><a href="/">Home</a></li>
                         <li><a href="/all">Products</a></li>    
-                        <li><a href="#footer">About</a></li>
-                        <li><a href="#footer">Contact</a></li>
                         <li><a href="/new">Add New Product</a></li>
                     </ul>
                 </nav>
@@ -34,12 +32,15 @@
 
         <div class="row row-2">
         <h2 class="title">All Products</h2>
+
     <div class="search_box">
       <form action="/search" method="post"> 
         <input type="text" style="width:200px" value="Search" name="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
         <input type="button" style="width:70px" value="Search" onclick="document.forms[0].submit();">
       </form>
     </div>
+    </div>
+    <br>
 
     <div class="row">
         {{#each results}}
@@ -47,11 +48,14 @@
             {{name}}
                 <br>
                 <img src="{{picture}}" alt="" width="150" height="100">
-                <a href="/delete?id={{_id}}" onclick="return confirm('Are You sure You want to delete this product?')">Delete</a>
-                <a href="/edit?id={{_id}}">Edit</a>
+                <p style ="color: {{func price}}" >{{price}}</p>
+                <a href="/delete?id={{_id}}"  onclick="return confirm('Are You sure You want to delete this product?')" style="orange">Delete</a>
+                <a href="/edit?id={{_id}}" style="orange">Edit</a>
         </div>
         {{/each}}
     </div>
+
+    
 <!-- footer-->
     <div class="footer" id="footer">
         <hr>
@@ -61,8 +65,8 @@
                     <h3>Download Our App</h3>
                     <p>Download App for Android and ios mobile phone.</p>
                     <div class="app-logo">
-                        <img src="images/play-store.png">
-                        <img src="images/app-store.png">
+                        <img src="/images/play-store.png">
+                        <img src="/images/app-store.png">
                     </div>
                 </div>
                 <div class="footer-col-2">
