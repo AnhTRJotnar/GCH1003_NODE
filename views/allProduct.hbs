@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Poppins:wght@300;400;500;600;700&family=Shizuru&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
+
 <body>
     <div class="header">
         <div class="container">
@@ -28,17 +29,17 @@
             </div>
         </div>
     </div>
-    <div class="small-container">
 
+    <div class="small-container">
         <div class="row row-2">
         <h2 class="title">All Products</h2>
 
-    <div class="search_box">
-      <form action="/search" method="post"> 
-        <input type="text" style="width:200px" value="Search" name="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-        <input type="button" style="width:70px" value="Search" onclick="document.forms[0].submit();">
-      </form>
-    </div>
+        <div class="search_box">
+        <form action="/search" method="post"> 
+            <input type="text" style="width:200px" value="Search" name="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+            <input type="button" style="width:70px" value="Search" onclick="document.forms[0].submit();">
+        </form>
+        </div>
     </div>
     <br>
 
@@ -54,8 +55,8 @@
         </div>
         {{/each}}
     </div>
+</body>
 
-    
 <!-- footer-->
     <div class="footer" id="footer">
         <hr>
